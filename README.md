@@ -14,3 +14,7 @@ Example of how to generate video
 ```
 manim -p -ql example.py SquareToCircle
 ```
+
+From here
+
+https://github.com/ManimCommunity/manim
