@@ -3,7 +3,7 @@ from manim import *
 class SienaIntro(Scene):
 	def construct(self):
 		sienacollege = Text("Siena College").set_color(GREEN_E).scale(2)
-		triangle = Triangle().set_color(YELLOW_E).scale(3.45)
+		triangle = Triangle().set_color(YELLOW_E).scale(1.50)
 		square = Square().set_color(GREEN_E).scale(3)
 		circle = Circle(fill_opacity=5).set_color(YELLOW_E).set_fill().scale(3)
 		circle2 = Circle().set_color(GREEN_E).scale(3)
