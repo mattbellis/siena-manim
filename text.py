@@ -1,7 +1,7 @@
 from manim import *
 
 class SienaIntro(Scene):
-	arguments = {"camera_config":{"background_color": BLACK}}
+	arguments = {"camera_config":{"background_color": GREY}}
 
 	def construct(self):
 		circle_logo = Circle(fill_opacity=5).scale(3)
@@ -23,7 +23,7 @@ class SienaIntro(Scene):
 		text4=text2.next_to(text3,DOWN,buff=0)
 
 		self.play(Write(circle_logo2),Write(text3),Write(text4))
-		self.wait(1)
+		self.wait()
 
 
 #class MovingBox(Scene):
@@ -41,7 +41,7 @@ class SienaIntro(Scene):
 		self.wait()
 		framebox1 = SurroundingRectangle(text[1],buff=.1).set_color(YELLOW)
 		framebox2 = SurroundingRectangle(text[3],buff=.1).set_color(YELLOW)
-		framebox3 = SurroundingRectangle(text[2],buff=.1).set_color(BLUE)
+		framebox3 = SurroundingRectangle(text[2],buff=.1).set_color(PURPLE)
 		self.play(Create(framebox1))
 		self.wait()
 		self.play(Create(framebox2))
@@ -62,7 +62,7 @@ class SienaIntro(Scene):
 		self.play(Write(text2))
 		self.wait()
 		framebox4 = SurroundingRectangle(text2[1],buff=.1).set_color(YELLOW)
-		framebox5 = SurroundingRectangle(text2[2],buff=.1).set_color(BLUE)
+		framebox5 = SurroundingRectangle(text2[2],buff=.1).set_color(PURPLE)
 		self.play(Create(framebox4))
 		self.wait()
 		self.play(Create(framebox5))
@@ -84,11 +84,40 @@ class SienaIntro(Scene):
 		self.wait()
 		text3 = MathTex("0=","3x","+5").scale(2)
 		framebox6 = SurroundingRectangle(text3[1],buff=.1).set_color(YELLOW)
-		framebox7 = SurroundingRectangle(text3[2],buff=.1).set_color(BLUE)
+		framebox7 = SurroundingRectangle(text3[2],buff=.1).set_color(PURPLE)
 		self.play(Write(text3))
 		self.wait()
 		self.play(Write(framebox6))
 		self.wait()
 		self.play(Write(framebox7))
+		self.wait(1)
+
+		self.play(FadeOut(text,shift=UP), FadeOut(text2,shift=UP),FadeOut(text3,shift=UP), FadeOut(framebox1,shift=UP),FadeOut(framebox2,shift=UP), FadeOut(framebox3,shift=UP),FadeOut(framebox4,shift=UP),FadeOut(framebox5,shift=UP), FadeOut(framebox6,shift=UP),FadeOut(framebox7,shift=UP))
+		self.play(FadeOut(step1),FadeOut(step2),FadeOut(step3))
 		self.wait()
+		hints= Text("Helpful Hints",color=PURPLE).scale(1.4)
+		self.play(Write(hints))
+		self.wait()
+		self.play(FadeOut(hints))
+		self.wait()
+		hint1 = Text("The variable and the power it's raised to\n are the only things that matter!")
+		self.play(Write(hint1))
+		self.wait(1)
+		self.play(FadeOut(hint1),run_time=4)
+		hint2 = Text("Always box the sign that's infront of a\n number or variable with it!")
+		self.wait()
+		self.play(Write(hint2))
+		self.wait(1)
+		self.play(FadeOut(hint2),run_time=4)
+		self.wait()
+		hint3 = Text("Only add or subtract the coefficients!\n Variables just tag along.")
+		self.play(Write(hint3))
+		self.wait(1)
+		self.play(FadeOut(hint3),run_time=4)
+		self.wait()
+		hint4 = Text("Any lone variable has a one infront!")
+		self.play(Write(hint4))
+		self.play(FadeOut(hint4),run_time=4)
+		self.wait(1)
+		
 
