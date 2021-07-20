@@ -30,12 +30,18 @@ class SienaIntro(Scene):
 		self.play(FadeOut(physics))
 		square.scale(0.15).next_to(circle,0,buff=0)
 		self.wait()
-		
-		prob1 = Text("If you want to know your position, after some time has passed,\n you take your starting position, add it to your starting\n velocity multiplied by the time that has passed,then add\n one-half the acceleration multiplied by the time that\n has passed squared.").scale(.7)
+
+
+
+		wordprob = Text("Equation Explainers").set_color(BLUE)
+		self.play(Write(wordprob),run_time=7)
+		self.wait()
+		self.play(FadeOut(wordprob))
+		self.wait()		
+		prob1 = Text("If you want to know your position, after some time has passed,\nyou take your starting position, add it to your starting\nvelocity multiplied by the time that has passed,then add\none-half the acceleration multiplied by the time that\nhas passed squared.").scale(.7)
 		math1 = MathTex("X","(t)","=","X_{0}","+","V_{0}","t","+",".5","a","t^2").next_to(prob1,DOWN)
 		self.play(Write(prob1))
 		self.play(Write(math1),run_time=5) 
 		self.wait(1)
-#		prob1.set_color_by_tex("position,",BLUE)
-#		math1[0].set_color(BLUE)
+		math1[0].set_color(BLUE)
 		self.wait()
