@@ -29,13 +29,13 @@ class SienaIntro(Scene):
 #class MovingBox(Scene):
 		
 #	def construct(self):
-		title = Text("Simplifying Equations",color = PURPLE).scale(1.4)
+		title = Text("Grouping Like Terms",color = PURPLE).scale(1.4)
 		self.add(title)
 		self.wait()
 		self.play(FadeOut(title))
 		text = MathTex("0=","x","+5","+2x").scale(2)
 		self.play(Write(text))
-		step1 = Text("Step 1 : Box all matching expressions").to_corner(DL).scale(.6)
+		step1 = Text("Step 1 : Box all matching terms").to_corner(DL).scale(.6)
 		step1.shift(LEFT*2)
 		self.add(step1)
 		self.wait()
@@ -49,7 +49,7 @@ class SienaIntro(Scene):
 		self.play(Create(framebox3))
 		self.wait()
 
-		step2 = Text("Step 2 : Rewrite equation so matching expressions are next to each other").to_corner(DL).scale(.6)
+		step2 = Text("Step 2 : Rewrite equation so matching terms are next to each other").to_corner(DL).scale(.6)
 		step1.shift(UP)
 		step2.align_to(step1, LEFT)
 		self.add(step2)
@@ -68,7 +68,7 @@ class SienaIntro(Scene):
 		self.play(Create(framebox5))
 		self.wait()
 		
-		step3 = Text("Step 3 : Combine all matching expressions").to_corner(DL).scale(.6)
+		step3 = Text("Step 3 : Combine all matching terms").to_corner(DL).scale(.6)
 		step1.shift(UP)
 		step2.shift(UP)
 		step3.align_to(step2, LEFT)
