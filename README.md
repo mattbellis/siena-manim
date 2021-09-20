@@ -21,7 +21,7 @@ https://github.com/ManimCommunity/manim
 
 
 # Installation stuff
-On my desktop I was getting pycairo errors. This worked
+On my desktop I was getting pycairo errors. This didn't work.
 ```
 sudo /opt/anaconda3/bin/pip --no-cache-dir install pycairo==1.11.1
 ```
