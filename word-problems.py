@@ -87,7 +87,7 @@ class SienaIntro(Scene):
 		self.play(FadeOut(math1))
 		self.wait(.5)
 
-		prob2 = Text("An objects final velocity is equal to the velocity\nit started with plus it's acceleration times the\namount of time that has passed.").scale(.7)
+		prob2 = Text("An objects final velocity is equal to the velocity\nit started with plus its acceleration times the\namount of time that has passed.").scale(.7)
 		math2 = MathTex("V_{f}", "=", "V_{i}", "+", "a","t").next_to(prob2, DOWN*3).scale(1.5)
 		prob2[0:21].set_color(RED)
 		prob2[30:54].set_color(YELLOW)
