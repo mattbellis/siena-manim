@@ -6,3 +6,10 @@ manim -p -ql text.py Text
 
 manim -p -ql shapes.py Shapes
 
+
+##### 
+
+# Once in the docker environment
+cd siena-manim
+
+manim -p -ql word-problems.py SienaIntro
