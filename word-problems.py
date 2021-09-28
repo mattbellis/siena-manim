@@ -159,6 +159,22 @@ class SienaIntro(Scene):
 		self.wait()
 
 		note2 = Text("These two equations are identical, despite having\nslightly different descriptions and symbols. It's\nimportant to always think about what a symbol means\nbefore plugging in values!").scale(.7).next_to(math2,UP*2).set_color(BLUE)
-		self.play(Write(note2),run_time=5)
-		self.wait()
+		self.play(Write(note2),run_time=6)
+		self.wait(4)
+
+		
  
+		#end
+		self.play(FadeOut(note2))
+		self.play(FadeOut(math2))
+		self.play(FadeOut(math3))
+		self.remove(triangle_logo)
+		self.remove(circle_logo)
+		self.remove(square)
+
+		self.wait()
+		end_sienacollege = Text("Siena College").set_color(GREEN_E).scale(1.5)
+		end_circle = Circle(fill_opacity=5).set_color(YELLOW_E).set_fill().scale(3)
+		self.play(GrowFromCenter(end_circle))
+		self.play(GrowFromCenter(end_sienacollege))
+		self.wait(2)
