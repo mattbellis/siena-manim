@@ -120,3 +120,17 @@ class SienaIntro(Scene):
 		self.play(FadeOut(hint4),run_time=4)
 		self.wait(1)
 
+		#end
+		self.remove(text3)
+		self.remove(text4)
+		self.remove(text1)
+		self.remove(circle_logo2)
+
+		self.wait()
+		end_sienacollege = Text("Siena College").set_color(GREEN_E).scale(1.5)
+		end_circle = Circle(fill_opacity=5).set_color(YELLOW_E).set_fill().scale(3)
+		self.play(GrowFromCenter(end_circle))
+		self.play(GrowFromCenter(end_sienacollege))
+		self.wait(2)
+
+
