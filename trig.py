@@ -84,6 +84,18 @@ class SienaIntro(Scene):
 
 		self.remove(zero,two,three,four,five)
 		self.remove(dot,arc1,arc2,arc3,arc4)
+
+		conv = Tex("A full circle is $2\\pi$ radians or $360^{\\circ}$.$\\linebreak$ This equality can be used as a conversion$\\linebreak$ factor to switch between the two.").set_color(BLUE)
+		conv.shift(UP)
+		conv2 = Tex("$\\frac{2\\pi}{360^{\\circ}}= \\frac{\\pi}{180^{\\circ}}$").scale(2)
+		conv2.shift(DOWN)
+		self.play(Write(conv))
+		self.wait()
+		self.play(Write(conv2))
+		self.wait(3)
+
+		self.remove(conv,conv2)
+
 		R2D = Text("Converting from radians to degrees").set_color(GREEN)
 		self.play(FadeIn(R2D))
 		self.wait()
@@ -95,7 +107,7 @@ class SienaIntro(Scene):
 		ex = Text("Example:").scale(.5)
 		ex.shift(LEFT*3)
 		self.play(Write(ex))
-		R2Dmath = Tex("$\\frac{3\\pi}{4} \\text{ radians} * \\frac{180^{\\circ}}{\\pi\\text{ radians}} = 135^{\\circ}$")
+		R2Dmath = Tex("$\\frac{3\\pi}{4} \\text{ radians} \\times \\frac{180^{\\circ}}{\\pi\\text{ radians}} = 135^{\\circ}$")
 		R2Dmath.shift(DOWN*1.5)
 		self.play(Write(R2Dmath))
 		self.wait(2)
@@ -114,7 +126,7 @@ class SienaIntro(Scene):
 		ex2 = Text("Example:").scale(.5)
 		ex2.shift(LEFT*3)
 		self.play(Write(ex2))
-		D2Rmath = Tex("$45^{\\circ} * \\frac{\\pi\\text{ radians}}{180^{\\circ}} = \\frac{\\pi}{4}\\text{ radians}$")
+		D2Rmath = Tex("$45^{\\circ} \\times \\frac{\\pi\\text{ radians}}{180^{\\circ}} = \\frac{\\pi}{4}\\text{ radians}$")
 		D2Rmath.shift(DOWN*1.5)
 		self.play(Write(D2Rmath))
 		self.wait(2)
