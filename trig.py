@@ -120,4 +120,16 @@ class SienaIntro(Scene):
 		self.wait(2)
 
 
-#conclusion from word problems
+
+		self.remove(D2Rrule,ex2,D2Rmath)
+
+		self.remove(triangle_logo)
+		self.remove(circle_logo)
+		self.remove(square)
+
+		self.wait()
+		end_sienacollege = Text("Siena College").set_color(GREEN_E).scale(1.5)
+		end_circle = Circle(fill_opacity=5).set_color(YELLOW_E).set_fill().scale(3)
+		self.play(GrowFromCenter(end_circle))
+		self.play(GrowFromCenter(end_sienacollege))
+		self.wait(2)
