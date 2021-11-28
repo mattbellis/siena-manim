@@ -132,8 +132,41 @@ class SienaIntro(Scene):
 		self.wait(2)
 
 
-
 		self.remove(D2Rrule,ex2,D2Rmath)
+
+
+		#You try
+		practice = Tex("Let's Practice").set_color(PINK)
+		self.play(GrowFromCenter(practice))
+		self.wait()
+		self.remove(practice)
+		
+		prob1 = Tex("$\\text{What is }60^{\\circ} \\text{ in radians?}$")
+		prob1.shift(UP*2)
+		self.play(Write(prob1))
+		pause = Tex("Pause the video and try").set_color(ORANGE)
+		self.wait()
+		self.add(pause)
+		self.wait(3)
+		self.remove(pause)
+		prob1math = Tex("$60^{\\circ} \\times \\frac{\\pi\\text{ radians}}{180^{\\circ}} = \\frac{\\pi}{3}\\text{ radians} \\approx 1.05\\text{ radians}$")
+		self.play(Write(prob1math))
+		self.wait(3)
+
+		self.remove(prob1,prob1math)
+		prob2 = Tex("$\\text{What is }5 \\text{ radians in degrees?}$")
+		prob2.shift(UP*2)
+		self.play(Write(prob2))
+		pause = Tex("Pause the video and try").set_color(ORANGE)
+		self.wait()
+		self.add(pause)
+		self.wait(3)
+		self.remove(pause)
+		prob2math = Tex("$5 \\text{ radians} \\times \\frac{180^{\\circ}}{\\pi\\text{ radians}} \\approx 286^{\\circ}$")
+		self.play(Write(prob2math))
+		self.wait(3)		
+
+		self.remove(prob2,prob2math)
 
 		self.remove(triangle_logo)
 		self.remove(circle_logo)
