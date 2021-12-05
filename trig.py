@@ -53,7 +53,7 @@ class SienaIntro(Scene):
 		angle1 = math.radians(90)
 		arc1 = Arc(radius=2,angle=angle1).set_color(RED)
 		self.play(Create(arc1))
-		two = Tex("$90^{\\circ}\\text{ or }\\frac{\\pi}{2}$").set_color(RED)
+		two = Tex("$90^{\\circ}\\text{ or }\\frac{\\pi}{2}\\text{radians}$").set_color(RED)
 		two.shift(UP*2.5)
 		self.play(Write(two))
 
@@ -61,7 +61,7 @@ class SienaIntro(Scene):
 		angle2 = math.radians(180)
 		arc2 = Arc(radius = 2, angle = angle2).set_color(BLUE)
 		self.play(Create(arc2))
-		three = Tex("$180^{\\circ}\\text{ or }\\pi$").set_color(BLUE)
+		three = Tex("$180^{\\circ}\\text{ or }\\pi\\text{ radians}$").set_color(BLUE)
 		three.shift(LEFT*4)
 		self.play(Write(three))
 
@@ -69,7 +69,7 @@ class SienaIntro(Scene):
 		angle3 = math.radians(270)
 		arc3 = Arc(radius=2,angle=angle3).set_color(YELLOW)
 		self.play(Create(arc3))
-		four = Tex("$270^{\\circ}\\text{ or }\\frac{3\\pi}{2}$").set_color(YELLOW)
+		four = Tex("$270^{\\circ}\\text{ or }\\frac{3\\pi}{2}\\text{radians}$").set_color(YELLOW)
 		four.shift(DOWN*2.5)
 		self.play(Write(four))
 
@@ -77,8 +77,8 @@ class SienaIntro(Scene):
 		angle4 = math.radians(360)
 		arc4 = Arc(radius=2,angle=angle4).set_color(PURPLE)
 		self.play(Create(arc4))
-		five = Tex("$360^{\\circ} \\text{ or } 2\\pi$").set_color(PURPLE)
-		five.shift(RIGHT*4)
+		five = Tex("$ 360^{\\circ} \\text{ or } 2\\pi\\text{ radians}$").set_color(PURPLE)
+		five.shift(RIGHT*4.5)
 		self.play(Write(five))
 		self.wait(4)
 
@@ -110,7 +110,7 @@ class SienaIntro(Scene):
 		R2Dmath = Tex("$\\frac{3\\pi}{4} \\text{ radians} \\times \\frac{180^{\\circ}}{\\pi\\text{ radians}} = 135^{\\circ}$")
 		R2Dmath.shift(DOWN*1.5)
 		self.play(Write(R2Dmath))
-		self.wait(2)
+		self.wait(4)
 
 
 		self.remove(R2Drule,ex,R2Dmath)
@@ -129,14 +129,14 @@ class SienaIntro(Scene):
 		D2Rmath = Tex("$45^{\\circ} \\times \\frac{\\pi\\text{ radians}}{180^{\\circ}} = \\frac{\\pi}{4}\\text{ radians}$")
 		D2Rmath.shift(DOWN*1.5)
 		self.play(Write(D2Rmath))
-		self.wait(2)
+		self.wait(4)
 
 
 		self.remove(D2Rrule,ex2,D2Rmath)
 
 
 		#You try
-		practice = Tex("Let's Practice").set_color(PINK)
+		practice = Tex("Let's Practice").set_color(PINK).scale(1.5)
 		self.play(GrowFromCenter(practice))
 		self.wait()
 		self.remove(practice)
@@ -151,7 +151,7 @@ class SienaIntro(Scene):
 		self.remove(pause)
 		prob1math = Tex("$60^{\\circ} \\times \\frac{\\pi\\text{ radians}}{180^{\\circ}} = \\frac{\\pi}{3}\\text{ radians} \\approx 1.05\\text{ radians}$")
 		self.play(Write(prob1math))
-		self.wait(3)
+		self.wait(5)
 
 		self.remove(prob1,prob1math)
 		prob2 = Tex("$\\text{What is }5 \\text{ radians in degrees?}$")
@@ -164,7 +164,7 @@ class SienaIntro(Scene):
 		self.remove(pause)
 		prob2math = Tex("$5 \\text{ radians} \\times \\frac{180^{\\circ}}{\\pi\\text{ radians}} \\approx 286^{\\circ}$")
 		self.play(Write(prob2math))
-		self.wait(3)		
+		self.wait(5)		
 
 		self.remove(prob2,prob2math)
 
